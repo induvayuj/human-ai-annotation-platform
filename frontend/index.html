@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AI Annotation Tool</title>
+  <style>
+    body {
+      font-family: Arial;
+      background: #f4f6f8;
+      text-align: center;
+      margin-top: 50px;
+    }
+    .box {
+      background: white;
+      padding: 20px;
+      width: 400px;
+      margin: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    select, button {
+      margin: 10px;
+      padding: 10px;
+      width: 80%;
+    }
+  </style>
+</head>
+<body>
+
+<div class="box">
+  <h2>AI Annotation Tool</h2>
+
+  <p id="text">"This movie is amazing!"</p>
+
+  <p><b>AI Suggestion:</b> Positive ✅</p>
+
+  <select id="label">
+    <option>Positive</option>
+    <option>Negative</option>
+  </select>
+
+  <button onclick="submitLabel()">Submit</button>
+
+  <p id="result"></p>
+</div>
+
+<script>
+function submitLabel() {
+  let label = document.getElementById("label").value;
+  document.getElementById("result").innerText =
+    "Label submitted: " + label + " ✔";
+}
+</script>
+
+</body>
+</html>
